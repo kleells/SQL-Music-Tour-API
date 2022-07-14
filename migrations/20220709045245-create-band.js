@@ -1,36 +1,34 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Set_Times', {
-      set_time_id: {
+    await queryInterface.createTable('bands', {
+      band_id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      event_id: {
-        type: Sequelize.SMALLINT,
+      name: {
+        type: Sequelize.STRING,
         allowNull: false
       },
-      stage_id: {
-        type: Sequelize.SMALLINT,
+      genre: {
+        type: Sequelize.TEXT,
         allowNull: false
       },
-      band_id: {
-        type: Sequelize.SMALLINT,
-        allowNull: false
-      },
-      start_time: {
+      available_start_time: {
         type: Sequelize.DATE,
-        allowNull: false
+        allowNull: false,
+        defaultValue: Sequelize.NOW
       },
       end_time: {
         type: Sequelize.DATE,
-        allowNull: false
+        allowNull: false,
+        defaultValue: Sequelize.NOW
       }
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Set_Times');
+    await queryInterface.dropTable('bands');
   }
 };

@@ -2,22 +2,22 @@
   "development": {
     "username": "postgres",
     "password": "100K",
-    "database": "music_tour",
+    "database": "cli_test",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgresql"
   },
   "test": {
     "username": "postgres",
     "password": "100K",
-    "database": "music_tour_test",
+    "database": "cli_test",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgresql"
   },
   "production": {
     "username": "postgres",
     "password": "100K",
-    "database": "music_tour_production",
+    "database": "cli_test",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgresql"
   }
 }
